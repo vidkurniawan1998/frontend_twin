@@ -1,0 +1,21 @@
+.hr-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.borderless{
+  li{
+    border-left: none;
+    border-right: none;
+    padding: 10px 20px;
+
+    &:first-child{
+      border-top: none
+    }
+
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+}
+

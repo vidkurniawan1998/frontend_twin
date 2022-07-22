@@ -1,0 +1,16 @@
+.list-group{
+    .list-group-item{
+        position: relative;
+
+        .form-edit-stock{
+            position: absolute;
+            transition: .3s;
+            width: calc(100% - 100px); right: 0; top: 0;
+            z-index: 99; padding: 15px;
+            height: 100%; border-left: 1px #ddd solid;
+            
+
+            background: #fff
+        }
+    }
+}

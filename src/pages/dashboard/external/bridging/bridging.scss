@@ -1,0 +1,139 @@
+.time-convert{
+    position: fixed;
+    right: 15px; bottom: 10px;
+}
+
+.frame-upload{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+
+    .file-control{
+        i{
+            position: absolute;
+            font-size: 50px;
+            color: #999;
+            transition: .3;
+
+            &.nav-left{
+                left: -80px; top: 50%;
+                transform: translate(0, -50%);
+            }
+
+            &.nav-right{
+                right: -80px; top: 50%;
+                transform: translate(0, -50%);
+            }
+
+            &:hover{
+                color: #0275d8;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .input-file{
+        text-align: center;
+        width: 400px; height: 400px;
+        border-radius: 50%;
+        transition: .3s;
+        border: 1px #ddd solid;
+        opacity: 0.5;
+        padding: 120px 35px;
+        overflow: hidden;
+        background-color: #fff;
+
+        &.active{
+
+            &::before{
+                content: '';
+                position: absolute;
+                width: 410px; height: 410px;
+                // border: 2px #999 dashed;
+                left: -5px; top: -5px;
+                border-radius: 50%;
+                // border: 3px #999 dotted;
+                transform: rotate(360deg);
+                animation: circle 3s linear infinite alternate
+                
+            }
+        }
+
+        .img{
+            position: relative;
+
+            span{
+                position: absolute;
+                background-color: rgba(0,0,0,0.8);
+                color: #fff; margin-left: -20px; border: 3px #fff solid;
+                padding: 3px 15px;
+                border-radius: 30px;
+            }
+
+            img{
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        i{
+            font-size: 90px;
+            color: #999;
+            transition: .3s;
+        }
+
+        &:hover{
+            cursor: pointer; opacity: .7;
+            color: #0275d8;
+
+            i{
+                color: #0275d8;
+            }
+        }
+
+        &:active{
+            background-color: lighten($color: #0275d8, $amount: 52%)
+        }
+    }
+}
+
+.btn-fly{
+    transition: .3s;
+    position: absolute;
+    left: 50%; bottom: 10px;
+    transform: translate(-50%, -10px);
+    padding: 10px 15px;
+}
+
+@keyframes circle{
+    from{
+        transform: rotate(0deg);
+        // border: 3px #999 dotted;
+        box-shadow: 0 3px 3px #ddd;
+
+    }
+
+    to{
+        transform: rotate(360deg);
+        // border: 3px #0275d8 dotted;
+        box-shadow: 0 3px 3px #0275d8;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    .input-file{
+        width: 330px !important;
+        height: 330px !important;
+        padding: 70px 35px !important;
+
+        &.active{
+
+            &::before{
+                content: '' !important;
+                position: absolute !important;
+                width: 340px !important; height: 340px !important;
+            }
+        }
+    }
+}

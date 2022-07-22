@@ -1,0 +1,28 @@
+.form-edit-about{
+    position: absolute;
+    background-color: #fff;
+    left: -6px; bottom: -5px;
+    width: 100%;
+    z-index: 99;
+    padding: 15px;
+    border-top: 1px #ccc solid;
+
+    textarea{
+        resize: none;
+        height: 100px;
+    }
+}
+
+.blur{
+    filter: blur(3px);
+    transition: .3s;
+
+    &::before{
+        content: '';
+        background: rgba(0,0,0,0.1);
+        position: fixed;
+        left: 0; top: 0;
+        height: 100%; width: 100%; 
+        z-index: 9999;
+    }
+}

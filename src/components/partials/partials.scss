@@ -1,0 +1,15 @@
+.search-clear{
+    position: absolute;
+    left: 10px; top: 50%; transform: translate(0, -50%);
+    font-size: 17px;
+    color: #999; transition: .3s;
+
+    &:hover{
+        color: #333;
+        cursor: pointer;
+    }
+
+    &.disabled{
+        pointer-events: none;
+    }
+}

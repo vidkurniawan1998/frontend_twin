@@ -1,0 +1,19 @@
+.twin{
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 40px !important;
+}
+
+.pass-visible{
+    position: absolute;
+    right: 5px; transition: .3s;
+    bottom: 5px;
+    padding: 6px;
+    border-radius: 50%;
+
+    &:hover{
+        right: 1px; bottom: 1px;
+        color: #0275d8; padding: 10px;
+        cursor: pointer;
+        background: rgba(0,0,0,.05);
+    }
+}

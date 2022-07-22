@@ -1,0 +1,50 @@
+.modal-header{
+    &:active{
+        cursor: move;
+    }
+
+    .modal-title{
+        &:active{
+            cursor: text;
+        }
+    }
+
+    user-select: none;
+}
+
+.modal-controls{
+    float: right;
+
+    button{
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        height: 30px; width: 30px;
+        margin-left: 5px; padding: 4px 5px;
+        background-color: transparent;
+        transition: .2s;
+        color: #444;
+
+        &:hover{
+            cursor: pointer;
+            background-color: #f5f5f5;
+        }
+
+        &:active{
+            background-color: darken($color: #f5f5f5, $amount: 5%)
+        }
+    }
+}
+
+.modal-body{
+    max-height: calc(100vh - 185px) !important;
+    overflow: auto; transition: .3s;
+    scroll-behavior: smooth;
+  
+}
+
+.modal-footer{
+    display: block;
+    text-align: right;
+    padding-top: 12px
+}
